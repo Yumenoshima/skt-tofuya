@@ -11,19 +11,23 @@
 
     var startTime = 0;
     var elapsedTime = 0;
+    var elapsedTimeOld = 0;
     var elapsedTimeOnStop = 0;
+    var speedupTime = 0;
 
     const REFRESH_RATE = 1000 / 60; //60 FPS!!
 
     window.setInterval(() => {
         // state == start
         if (state.textContent === start.textContent) {
-            elapsedTime = Date.now() - startTime + elapsedTimeOnStop;
+            elapsedTime = Date.now() - startTime + elapsedTimeOnStop + speedupTime;
         }
 
         // state == speedup
         if (state.textContent === speedup.textContent) {
-            elapsedTime = Date.now() - startTime + elapsedTimeOnStop;
+            elapsedTimeOld = elapsedTime;
+            elapsedTime = Date.now() - startTime + elapsedTimeOnStop + speedupTime;
+            speedupTime = speedupTime + elapsedTime - elapsedTimeOld
         }
         //set timer text
         timer.textContent = (elapsedTime / 1000).toFixed(3)
@@ -58,6 +62,7 @@
         //set timer text
         elapsedTime = 0;
         elapsedTimeOnStop = 0;
+        speedupTime = 0;
         //set picture
         picture.src = "img/lm/4.png";
     });

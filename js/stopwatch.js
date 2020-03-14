@@ -7,6 +7,7 @@
     var speedup = document.getElementById('speedup');
     var stop = document.getElementById('stop');
     var reset = document.getElementById('reset');
+    var picture = document.getElementById('picture');
 
     var startTime = 0;
     var elapsedTime = 0;
@@ -34,6 +35,9 @@
         state.textContent = this.textContent;
         //set start time
         startTime = Date.now();
+
+        //set picture
+        picture.src = "img/lm/2.png";
     });
 
     stop.addEventListener('click',function(){
@@ -42,7 +46,9 @@
             //set state text
             state.textContent = this.textContent;
             //get elapsed time on stop
-            elapsedTimeOnStop = elapsedTime
+            elapsedTimeOnStop = elapsedTime;
+            //set picture
+            picture.src = "img/lm/3.png";
         }
     });
 
@@ -52,6 +58,8 @@
         //set timer text
         elapsedTime = 0;
         elapsedTimeOnStop = 0;
+        //set picture
+        picture.src = "img/lm/4.png";
     });
 
     speedup.addEventListener('click',function(){
@@ -59,6 +67,8 @@
         if(state.textContent === "START") {
             //set state text
             state.textContent = this.textContent;
+            //set picture
+            picture.src = "img/lm/5.png";
         }
     });
 })();

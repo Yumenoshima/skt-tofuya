@@ -3,12 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>stopwatch</title>
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <style>
+        body {
+            background-color: darkkhaki;
+        }
+        .container {
+            margin-top: 100px;
+            text-align: center;
+        }
+        .title, .myButton, #timer {
+            font-family: 'Berkshire Swash', cursive;
+            color: #191970;
+        }
+        .myButton {
+            width: 180px;
+            height: 50px;
+            border: none;
+            border-radius: 6px;
+            background-color: white;
+            font-size: 16px;
+        }
+
+        #timer {
+            margin-top: 100px;
+            margin-right: 0;
+            margin-left: 0;
+            margin-bottom: 100px;
+            color: white;
+            font-size: 80px;
+        }
+
+
+    </style>
 </head>
 <body>
-<h1>stopwatch</h1>
+<h1 class="title">Phase 1 Task</h1>
 <ol>
     <li>Create a simple stopwatch where user can start, stop, pause and reset.</li>
 </ol>
+<hr>
+
+<div class="container">
+    <h1 class="title">Stopwatch</h1>
+    <div id="timer">00:00:000</div>
+    <button id="start" class="myButton">START</button>
+    <button id="stop" class="myButton">STOP</button>
+    <button id="reset" class="myButton">RESET</button>
+</div>
+
+<script src="js/stopwatch.js"></script>
 
 </body>
 </html>

@@ -8,15 +8,15 @@
         body {
             background-color: darkkhaki;
         }
-        .container {
+        .stopwatch {
             margin-top: 100px;
             text-align: center;
         }
-        .title, .myButton, #state {
+        .stopwatch__title, .stopwatch__button, #state {
             font-family: 'Berkshire Swash', cursive;
             color: #191970;
         }
-        .myButton {
+        .stopwatch__button {
             width: 180px;
             height: 50px;
             border: none;
@@ -25,7 +25,7 @@
             font-size: 16px;
         }
 
-        #timer {
+        .stopwatch__timer {
             margin-top: 100px;
             margin-right: 0;
             margin-left: 0;
@@ -34,7 +34,7 @@
             font-size: 80px;
         }
 
-        #state {
+        .stopwatch__state {
             margin-top: 0;
             margin-right: 0;
             margin-left: 0;
@@ -61,22 +61,20 @@
 </ol>
 <hr>
 
-<div class="container">
-    <h1 class="title">Stopwatch</h1>
-    <div id="timer">0</div>
-    <img id="picture" src="img/lm/1.png" alt="picture"/>
-    <div id="state">READY</div>
+<div class="stopwatch">
+    <h1 class="stopwatch__title">Stopwatch</h1>
+    <div class="stopwatch__timer" id="timer">0</div>
+    <img class="stopwatch__picture" id="picture" src="img/lm/1.png" alt="picture"/>
+    <div class="stopwatch__state" id="state">READY</div>
 
-    <button id="start" class="myButton">START</button>
-    <button id="speedup" class="myButton">SPEED UP</button>
-    <button id="stop" class="myButton">STOP</button>
-    <button id="reset" class="myButton">RESET</button>
+    <button id="start" class="stopwatch__button">START</button>
+    <button id="speedup" class="stopwatch__button">SPEED UP</button>
+    <button id="stop" class="stopwatch__button">STOP</button>
+    <button id="reset" class="stopwatch__button">RESET</button>
 
 </div>
 
 <script src="js/stopwatch.js"></script>
-
-
 
 <div class="footer">
     <a href="https://github.com/Yumenoshima/skt-tofuya">https://github.com/Yumenoshima/skt-tofuya</a>
